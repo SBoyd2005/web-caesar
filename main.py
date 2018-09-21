@@ -25,7 +25,7 @@ form="""
             }}
         </style>
     </head>
-<form action='/encrypt' method= 'POST'>
+<form action='/' method= 'POST'>
     <label>Rotate by:</label>
     <input type ="text" name="rot" value="0"/>
     <textarea name="text" name="text">{0}</textarea>
@@ -38,7 +38,7 @@ form="""
 def index():
     return form.format("")
 
-@app.route('/encrypt', methods= ['POST'])
+@app.route('/', methods= ['POST'])
 def encrypt():
     rot = request.form["rot"]
     text = request.form["text"]
